@@ -1,0 +1,89 @@
+  mkdir Day1
+  245  cd Day1/
+  246  mkdir new how
+  247  ls
+  248  rmdir new
+  249  ls
+  250  touch hai
+  251  ls
+  252  rmdir hai
+  253  rm hai
+  254  ls
+  255  mkdir file1 file2 file3
+  256  ls
+  257  cd  file1
+  258  touch example.txt
+  259  cd ..
+  260  rmdir file1
+  261  rm -r file1
+  262  ls
+  263  touch file1.txt
+  264  ls
+  265  rm -f file2
+  266  rm -f file1.txt
+  267  ls
+  268  cd ..
+  269  rmdir Day1/
+  270  rm -r Day1/
+  271  ls
+  272  history
+  273  mkdir Day1
+  274  cd Day1/
+  275  touch class1.txt
+  276  ls
+  277  cd class1.txt
+  278  vim class1.txt
+  279  vim class1.txt
+  280  cat class1.txt
+  281  mkdir day2 day3
+  282  ls
+  283  rmdir day2 day3
+  284  ls
+  285  mkdir day2/day3
+  286  mkdir -p abc/bca
+  287  ls
+  288  cd abc
+  289  ls
+  290  cd ../..
+  291  ca Day1/
+  292  cd Day1/
+  293  ls
+  294  rmdir abc
+  295  rm -r abc
+  296  tree
+  297  sudo tree install
+  298  mkdir -p day1/day2/day3/abc.txt
+  299  ls
+  300  cd day1
+  301  ls
+  302  cd day2
+  303  ls
+  304  cd day3
+  305  ls
+  306  cd ../..
+  307  cd ..
+  308  rm -r day1
+  309  ls
+  310  touch class2.txt
+  311  touch class3.txt
+  312  ls
+  313  vi class2.txt
+  314  vi class3.txt
+  315  cat class2.txt
+  316  ct class3.txt
+  317  cat class3.txt
+  318  cat class2.txt>class3.txt
+  319  cat class2.txt
+  320  cat class3.txt
+  321  date
+  322  cal
+  323  ls
+  324  ls -ltr
+  325  ls -lt
+  326  cat>srinu.txt
+  327  ls
+  328  cat srinu.txt
+  329  ls -ltr
+  330  ls -l
+  331  ls -a
+
