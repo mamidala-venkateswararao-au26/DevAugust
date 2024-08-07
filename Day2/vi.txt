@@ -1,34 +1,40 @@
 07-08-2024
 Vi --> editor
-
+ syntax: (Click ESC next double click yy destnation paste)  __>esc-->yy>p  (Copy the content past in Destination or whereever you want)
+(Copy -->Paste)
  double click yy - pp  once after ESC in VIM editor for the copy of content.
 
 syntax: ESC then double click YY - PP
 
-delete line:
-ESC --> double click dd (delete perticular line)
-    --> double click dw (delete word) dl(delete letter)
+delete line:  
+ESC --> double click dd (delete perticular line)  -->  esc-->dd
+    --> double click dw (delete word) dl(delete letter)  --> esc-->dw
     --> undo operation u
-    -->delete entire peragraph dL (small d captial L)
+    -->delete entire peragraph dL (small d captial L)    --> esc--> dL 
 
-set numbers
+set numbers:
+SYNTAX: [:set nu]  --> use for line number
+        [:set nonu]  --> use for remove line number
     --> ESC --> set nu
             --> set nonu
 
 search content in file:
+Syntax:  esc--> :/hello                   #here hello is the word which we are searching in th file.
      -->:/heritage   --> (content)
 
 search and replace:
-    -->:%s/india/usa
-    -->%s/india/usa/gi   (global insencitive)
-    -->1s/andriod/linux/gi
-   --> 10s/linux/mobile/gi
+ esc-->:%s/hello/hai    --> here wherever hello present in the file it wil replace by hai..(note: case sensitive)
+  ESC  -->:%s/india/usa
+    -->%s/india/usa/gi   (global insencitive)  
+     --> here wherever india present in the file it will replace by usa..(no case sensitive because of gi)
+    -->1s/andriod/linux/gi  (if you want to replace particulre value (syntax :1s/squel/varun) here 1 is line number)
+   --> 10s/linux/mobile/gi   (if you want to replace particulre value (syntax :10s/squel/varun) here 10 is line number)
 
 head :
      --> head abc.txt --> top 10 lines
-    --> head -n15 abc.txt
+    --> head -n15 abc.txt  --> top 15 lines
     --> tail abc.txt  --> bottam 10 lines
-    --> tail -n15 abc.txt
+    --> tail -n15 abc.txt   --> top 15 lines
           
                  ### (know about ram and storage)
 
@@ -42,13 +48,13 @@ df  :(disk free)  (total size of your hordware)
 free :
    --> free -g (avalible &used by ram)
 
-wc   :
+wc   :     Syntxt: (wc -l filename)
    --> wc -l add.txt (lines count)
-b  --> wc  -w add.txt (number of words)
+   --> wc  -w add.txt (number of words)
    --> wc -c add.txt (number of character)
    --> wc -m  add.txt (number of character)
 
-(ctrl +a -->begineing of the line)   (ctrl+e --> ending of the line)    (ctrl+k   ---> delete the lines)
+git --> (ctrl +a -->begineing of the line)   (ctrl+e --> ending of the line)    (ctrl+k   ---> delete the lines)
 
 
 
