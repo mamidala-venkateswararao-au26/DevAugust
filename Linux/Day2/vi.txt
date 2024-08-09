@@ -21,18 +21,20 @@ SYNTAX: [:set nu]  --> use for line number
         [:set nonu]  --> use for remove line number
     --> ESC --> set nu
             --> set nonu
-
+------------------------------------------- Search&Replace in the file-------------------------------------------------------------------
 search content in file:
-Syntax:  esc--> :/hello                   #here hello is the word which we are searching in th file.
+Syntax:  esc--> :/hello                  -->[later click n for find more hello in the file]                
+                                         --> #here hello is the word which we are searching in th file.
      -->:/heritage   --> (content)
 
+
 search and replace:
- esc-->:%s/hello/hai    --> here wherever hello present in the file it wil replace by hai..(note: case sensitive)
+ esc-->:%s/hello/hai         --> here wherever hello present in the file it wil replace by hai..(note: case sensitive)
   ESC  -->:%s/india/usa
-    -->%s/india/usa/gi   (global insencitive)  
+    -->%s/india/usa/gi       --> (global insencitive)  
      --> here wherever india present in the file it will replace by usa..(no case sensitive because of gi)
-    -->1s/andriod/linux/gi  (if you want to replace particulre value (syntax :1s/squel/varun) here 1 is line number)
-   --> 10s/linux/mobile/gi   (if you want to replace particulre value (syntax :10s/squel/varun) here 10 is line number)
+    -->1s/andriod/linux/gi   -->(if you want to replace particulre value (syntax :1s/squel/varun) here 1 is line number)
+   --> 10s/linux/mobile/gi   -->(if you want to replace particulre value (syntax :10s/squel/varun) here 10 is line number)
 
 head :
      --> head abc.txt --> top 10 lines
@@ -52,7 +54,7 @@ df  :(disk free)  (total size of your hordware)
 free :
    --> free -g (avalible &used by ram)
 
-wc   :     Syntxt: (wc -l filename)
+wc   :     Syntxt: (wc -l filename)         -->[this is just howmany lines present in the file..]
    --> wc -l add.txt (lines count)
    --> wc  -w add.txt (number of words)
    --> wc -c add.txt (number of character)
