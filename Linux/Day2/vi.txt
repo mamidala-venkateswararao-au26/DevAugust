@@ -7,8 +7,12 @@ Vi --> editor
 syntax: ESC then double click YY - PP
 
 delete line:  
-ESC --> double click dd (delete perticular line)  -->  esc-->dd
-    --> double click dw (delete word) dl(delete letter)  --> esc-->dw
+ESC --> double click dd (delete perticular line)  -->  esc-->dd   [move the curser starting of the line click dd so it will delete entire 
+        
+                                                                 line]
+
+    --> double click dw (delete word) dl(delete letter)  --> esc-->dw [move the curser starting of the word esc click dw it will delete 
+                                                                       entire line]
     --> undo operation u
     -->delete entire peragraph dL (small d captial L)    --> esc--> dL 
 
