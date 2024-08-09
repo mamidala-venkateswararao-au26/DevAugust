@@ -1,0 +1,57 @@
+09-09-2024
+
+grep:
+globel reqular expretion point
+it is use to search specific files &dic
+
+grep "linux" grep.txt    
+
+grep -i "linux" grep.txt      -->[i-case insensitive]  display all captial and small letters. output : linux   Linux
+
+
+grep -in "linux" grep.txt    --> [which line linux is presented inside your file.]
+
+grep  -ic "linux" grep.txt                         --> [howmany times is presented in my file]
+
+grep -iw "linux" grep.txt        --> [used to find the exact  match related linux word in the file]
+
+
+grep -inw "linux" grep.txt    
+
+grep -incw "linux" grep.txt
+
+grep -inw "linux" grep.txt | grep -c "linux"
+
+------------------------------------------------ Search file name using the keywords---------------------------------------------------------------
+
+i want to search for patren .. don't know the file name..
+
+grep -i "linux" *                     -> it will display the list of files where linux is presented.
+
+grep -l "linix" *                    --> it will display the file or directory where the key word was presented.
+
+grep -ie "linix" "window" grep.txt    ->[serach multipule patterns in same line use e]
+
+ls *.txt                              --> ls list of files and it is searching all .txt files display as output....
+
+ls f*                                -->  this command is use for diplay all the files start with f
+
+
+--------------------------------------------- search first letter and last letter using (^ ,$)----------------------------------------------------------                            
+
+grep "^h" file1         -->cap symble  [search only letter start with h]
+
+grep "^h" *              --> search only letter start with h 
+
+grep -i "w$" * | grep -c "w$"   --> this command is used for to check the words end with w and count the how many words present in the grep.
+
+grep "^l" file1
+
+grep "^lin" file1
+
+grep "h$" file1           [search for a word ending with l]
+
+
+Tee:
+
+ls | tee file.txt    --> tee is used to copy the files print into file.txt as output.          
