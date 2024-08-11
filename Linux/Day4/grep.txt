@@ -55,3 +55,15 @@ grep "h$" file1           [search for a word ending with l]
 Tee:
 
 ls | tee file.txt    --> tee is used to copy the files print into file.txt as output.          
+
+
+
+History:
+
+       grep "hello" file2.txt
+  504  grep "small" file2.txt
+  505  grep "glad" file2.txt
+  506  grep "lost" file2.txt
+  507  grep -in "lost" file2.txt
+  508*
+  509  grep -iw "lost" file2.txt
