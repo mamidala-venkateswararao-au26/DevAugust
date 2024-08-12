@@ -1,0 +1,179 @@
+12-08-2024
+FIND:
+LOCATE:
+UNAME:
+
+
+
+find:         -->find the location of or path of file or dir..and mailny find command is use to find the file in present working directory..
+
+syntax:
+
+--->  find . -iname "file1.txt"   --> this command is used to find the file1.txt in the cuurent directory..
+
+
+--->find copydir/ -iname "file1.txt"    -->  [syntax : find path(. or directoryname)  -iname "file1.txt  ]
+
+<><>if you want to find file without using current path(.) just use directory(folder) name --> [syntax : find path(. or directoryname)  -iname "file1.txt  ]<>
+
+
+1)list down all the files .which are created before 10 days.?   Syntx : [find . -mtime -type f "file1.txt]   --> [f is file and u can also use D d means directory.]
+
+-------> find . -type y -mtime +10
+
+
+
+2)list down all the files .which are created within 10 days.?   Syntx : find . -mtime type f -10  --> howmany days you want you can change accordingly..
+
+-------> find . -type y -mtime -10
+
+
+3)list down all empy files.
+
+-------> find .-type f -empty
+
+4) list of non empty files?
+
+-------> find . -type f -not -empty
+
+5) List out where the file present the curent path?
+
+-------> finf . -type f -iname "abc.txt"
+
+6) search only 2 folders?    --> searching only first and 2 directory
+
+a)  find . -maxdepth 2 -type f -oname "abc.txt"                 --> helps us to search restric the help to sub directoryes.
+
+
+7)list down all the specific files owned by users? as   -user
+
+----> find / -user username
+
+
+
+8)list all the files ending with .txt extentions?as
+
+--------->  find . ".txt$" *
+
+---------? grep ".txt$" *
+
+
+9)list of all the empty files and delete that??as
+
+
+
+find . -type f -empty | xargs rm -r
+
+10)how to find empty directory?
+
+find . -type d -empty
+
+11) list down all the files which is grater than 1mb,1kb?as
+
+---->    find /path/to/directory -type f -size +1M
+
+
+
+---------------------------------------------------------------
+
+locate:
+
+it will search file/dir entire system.
+
+
+syntax:
+
+locate file1
+
+locate file2.txt
+
+-----------------------uname-------
+uname: (unix name)
+
+uname 
+
+uname -a
+
+uname -v
+
+uname -o
+
+
+server : is nothing but anthoer computer create in somewhaere.
+
+
+
+
+
+
+history:
+
+  ls
+  500  find . -type f "file2.txt"
+  501  find . -iname "file2.txt"
+  502  find . -iname "file3.txt"
+  503  ls new1/
+  504  ls new1/new/
+  505  touch new1/new/file2.txt
+  506  ls new1/new/
+  507  find . -iname "file2.txt"
+  508  find new1/ -iname "file2.txt"
+  509  find . -type f -mtime  +10
+  510  find . -type f -mtime  +1
+  511  find . -type f -mtime  +2
+  512  find . -type f -mtime  +5
+  513  find . -type f -mtime  110
+  514  find . -type f -mtime  -10
+  515  find . -type d -mtime -10
+  516  find . -type f -empty
+  517  find . -type f -not -empty
+  518  find . -type d -empty
+  519  find . -type d -not -empty
+  520  find . -type f -iname "file2.txt"
+  521  find . -maxdepth 2 -type f -iname "file2.txt"
+  522  find . -maxdepth 2 -type f -oname "file2.txt"
+  523  find . -maxdepth 1 -type f -oname "file2.txt"
+  524  find . -maxdepth 1 -type f -iname "file2.txt"
+  525  find . -user -type f
+  526  find . -user -type f -iname *
+  527  find . -type f -user -iname *
+  528  find . -type f -user *
+  529  ls
+  530  find . -type f -iname -user *
+  531  find . -type f -iname -users *
+  532  find . -type f  -users *
+  533  find . -type f  -user *
+  534  find . -type f  -user
+  535  user --help
+  536  find . -user -name
+  537                                                                                                                                                               find . -user
+  538  find . -user
+  539  find . -user -iname
+  540  find / -type f -user
+  541  find / -type f -user vivek
+  542  find / -type f -user wonder
+  543  find / -type f -user venkat
+  544  find -user
+  545  uers --help
+  546  find / -user username
+  547  find / -user linix
+  548  find / -user knmba12
+  549  find . ".txt$" *
+  550  grep ".txt$" *
+  551  grep "^.txt" *
+  552*
+  553  find  "^.txt" *
+  554  find / -type f -size +1M
+  555  find . -type f -size +1M
+  556  find /Linux -type f -size +1M
+  557  ls
+  558  find /new1 -type f -size +1M
+  559  find /new1/ -type f -size +1M
+  560  locate day1
+  561  locate file2.txt
+  562  cd ..
+  563  cd Quantam\ Cloud/
+  564  ls
+  565  cd DevAugust/
+  566  ls
+  567  touch Linux/Day5/FindLocate.txt
