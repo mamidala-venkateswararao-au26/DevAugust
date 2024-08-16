@@ -55,6 +55,33 @@ grep "h$" file1           [search for a word ending with l]
 Tee:
 
 ls | tee file.txt    --> tee is used to copy the files print into file.txt as output.          
+----------------------------------------------------------------------------------------------------------------------------------------
+
+ubuntu@ip-172-31-36-205:~$ grep "hello" new3
+ubuntu@ip-172-31-36-205:~$ grep "called" new3
+Pkg's or lib's listed as required for the build may not be called the same in Arch, Debian or Slackware....as I've found out.
+ubuntu@ip-172-31-36-205:~$ grep -i "called" new3
+Pkg's or lib's listed as required for the build may not be called the same in Arch, Debian or Slackware....as I've found out.
+ubuntu@ip-172-31-36-205:~$ grep -c "called" new3
+1
+ubuntu@ip-172-31-36-205:~$ grep -n "called" new3
+6:Pkg's or lib's listed as required for the build may not be called the same in Arch, Debian or Slackware....as I've found out.
+ubuntu@ip-172-31-36-205:~$ grep -inw "called" new3 | grep -c "called"
+1
+
+ubuntu@ip-172-31-36-205:~$ ls *.txt
+file1.txt
+ubuntu@ip-172-31-36-205:~$ ls f*
+file1.txt  file2.text
+ubuntu@ip-172-31-36-205:~$ ls n*
+new3
+
+new:
+file1.txt  file2.txt  s.txt
+
+new2:
+ubuntu@ip-172-31-36-205:~$
+
 
 
 
