@@ -1,0 +1,224 @@
+14-08-2024:
+
+User Management:
+
+Linux: multi operating System.
+
+2 type of users in linux:
+
+Sudo/Super/Root  --> Admin --> he is 1st user .. he has ultimate power.
+
+Normal users    --> we are creating ---> we are normal users.
+
+
+switch to sudo:
+
+----------->sudo su      --> (switch user)
+
+
+root user to normal user :
+-----------> sudo su ubantu 
+
+
+user add:
+--->useradd balu
+
+
+---->id balu ---> to check weatcher user is created or not.
+---->passwd venkatesh
+
+Whenever user get created or not and  all the user you  will find here:
+----> cat /etc/passwd  --> anthoer way of conform user created or not.
+
+
+
+----------------------------------------------------------------------Shell--------------------------------------------------------------------------------------------
+
+shell  : take input from user give it kernal ..
+
+kernal : heart of operating system.kernal will do all opperations.. convert human understanding formate 
+
+
+shell   :->  chsh bash --> switch the bash 
+
+whenever user get creat it's normally by default sh .. use the chsh (change shell) to change the sh to bash
+
+------> sudo chsh -s /bin/bash divya       --> changing sh to bash to
+   
+      -> sudo chsh -s /bin/bash dharshan
+
+sudo chsh  -s /bin/bash balu         --> changing sh to bash to
+
+sudo userdel divya                  --> deleting the user
+
+
+How to create group:----------------------------------->
+
+--->sudo groupadd dev
+
+check weatcher group is existing or not :
+
+---> getent  group dev
+---> grep -i "dev" /etc/group
+
+how yo add user into group:
+
+
+sudo usermod -aG dev balu            --> usermod(user modificaton)
+
+now check: 
+id balu
+
+
+delete the user from group:
+
+-----------------> 1st methode --> vi /etc/group
+
+---------------->2nd methode --> sudo gpasspwd -d balu dev
+
+
+delete the group:
+--------> sudo groupdel dev 
+
+Check whether group is deleted or not?
+--------> getent group dev
+
+
+
+ading sudo permissions: [convert normal user to sudo user]
+
+1st --> add balu user to sudo group
+
+sudo usermo -aG sudo dharshan
+
+then use below command:
+
+vi /etc/sudousers
+ add dharshan name give permision :ALL
+
+syntax : dharshan:ALL
+
+
+--------------------------------------------------------------------------------------Package Management----------------------------------------------------------------
+
+
+Inastall packages:
+
+sudo apt update
+
+if you want to instaall git:
+
+sudo apt git
+
+git -v
+
+
+apt search git
+
+
+
+dpkg -l
+dpkg 
+
+remove the application:
+
+sudo apt remove apache2
+
+
+which apache2          --> will give the where the application path
+
+
+------------------------------------------------------History------------------------------------------------------------------------------
+------------------------------------------Create instanse first and fallow below steps--------------------------------------------------------
+->ubuntu@ip-172-31-36-205:~$ sudo su
+
+->root@ip-172-31-36-205:/home/ubuntu# useradd balu
+
+->root@ip-172-31-36-205:/home/ubuntu# id balu
+uid=1002(balu) gid=1002(balu) groups=1002(balu)
+
+->root@ip-172-31-36-205:/home/ubuntu# passwd balu
+New password:
+Retype new password:
+passwd: password updated successfully
+
+-> cat /etc/passwd       --> wheather id and password are created or not.
+balu:x:1002:1002::/home/balu:/bin/sh
+
+root@ip-172-31-36-205:/home/ubuntu# sudo userdel balu       --deleting user
+root@ip-172-31-36-205:/home/ubuntu# id balu
+id: ‘balu’: no such user
+
+
+Creating Group:
+
+root@ip-172-31-36-205:/home/ubuntu# sudo groupadd dev
+root@ip-172-31-36-205:/home/ubuntu# id dev
+id: ‘dev’: no such user
+root@ip-172-31-36-205:/home/ubuntu# getent group dev
+dev:x:1003:
+
+root@ip-172-31-36-205:/home/ubuntu# grep -i "dev" /etc/group
+plugdev:x:46:
+netdev:x:111:
+dev:x:1003:
+root@ip-172-31-36-205:/home/ubuntu# cat /etc/group
+root:x:0:
+
+
+adding user to group:
+
+root@ip-172-31-36-205:/home/ubuntu# sudo usermod -aG dev dharshan
+root@ip-172-31-36-205:/home/ubuntu# id dharshan
+uid=1002(dharshan) gid=1002(dharshan) groups=1002(dharshan),1003(dev)
+root@ip-172-31-36-205:/home/ubuntu#
+
+root@ip-172-31-36-205:/home/ubuntu# sudo usermod -aG  sudo dharshan
+root@ip-172-31-36-205:/home/ubuntu# id dharshan
+uid=1002(dharshan) gid=1002(dharshan) groups=1002(dharshan),27(sudo)
+
+
+
+delete the user from dev group:
+before delete:
+root@ip-172-31-36-205:/home/ubuntu# id dharshan
+uid=1002(dharshan) gid=1002(dharshan) groups=1002(dharshan),1003(dev)
+
+root@ip-172-31-36-205:/home/ubuntu# sudo gpasswd -d dharshan dev
+Removing user dharshan from group dev
+
+after del from the group :
+root@ip-172-31-36-205:/home/ubuntu# id dharshan
+uid=1002(dharshan) gid=1002(dharshan) groups=1002(dharshan)
+
+
+Deleting the group :
+
+root@ip-172-31-36-205:/home/ubuntu# sudo groupdel dev
+root@ip-172-31-36-205:/home/ubuntu# grep -i "dev" /etc/group
+plugdev:x:46:
+netdev:x:111:
+
+root@ip-172-31-36-205:/home/ubuntu# getent group dev
+root@ip-172-31-36-205:/home/ubuntu#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
