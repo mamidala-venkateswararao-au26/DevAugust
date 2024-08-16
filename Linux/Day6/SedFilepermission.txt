@@ -1,0 +1,130 @@
+13-08-2029
+
+
+Sed : (Stream Editior)  90% this is vi editior.. photo copy of exact file..fist it will create one temperary copy..
+
+how to replace xyz to abc :
+
+--------------->  2ways to replces:  1 --> open vi editor used this command  --> :%s/xyz/abc/gi imp.txt
+
+                                     2 --> useing sed (sed's/xyz/abc/gi'imp.txt) command to create duplicat copy first change whatever you want then if it is okay the 
+ 
+                                         if you want to perform those changes in your file use this command - (sed -i 's/xyz/abc/gi'imp.txt)                              
+
+Syntax:
+
+--------->sed 's/abc/xyz/gi'imp.txt
+
+
+--------->sed '2s/ac/xyz/gi' imp.txt           ---> if you want t change perticular line use this command
+
+
+once it is done testing part.. i need to        --> i means it affect the orginal file..
+
+
+---------> sed -i 2s/abc/xyz/gi' imp.txt
+
+
+How to replace 157 line number name as sachin:
+
+------------------------------- > sed -i '157s/157/sachin/gi' number.txt
+
+replace 3,4 line replace same time: 
+
+
+-------->  sed -i '3,4s/welcome/linux/gi' imp.txt
+
+
+
+print 150 line number:
+
+-----------------> sed -n 150p number
+
+
+printing 127 and 150 line(pritinting multipule line) :       ----> -e starnd for multipul option.
+
+----------------->sed -n -e 127p -e 150p number
+
+
+
+delete the particular line:
+
+------------------> sed -i '10d' number
+
+printing 199 and 189 lines:
+
+------------------>sed -i -e 199p -e 189p number
+
+------------------>sed -i '180,190d' number
+
+
+
+FILE TYPES:
+
+-  -> normal file
+
+d  -> Directory
+
+l  -> shortcut file(LINK)
+
+FILE PERMISSION:
+
+
+R  --> READ      -4
+
+W  --> WRITE     -2
+
+X  --> EXECUTE   -1
+
+
+owener(user)     group   otheruser
+
+7                 4         3
+
+
+Syntax:
+
+chmod 743 file1.txt                             --> 7(read,write,exicute)   4(read) 3(write exicute)
+
+or 
+
+chmod u=rwz,g=rw,o=r file1.txt              
+
+
+umask--------don't execute.
+'
+'
+'
+'
+'
+'
+
+'
+History
+
+ vi day1/day1.txt
+   81  vim day1/day1.txt
+   82  cat day1/day1.txt
+   83  sed 's/abc/xyz/gi'day1.txt
+   84  sed 's/abc/xyz/gi' day1.txt
+   85  cd day1/
+   86  sed 's/abc/xyz/gi' day1.txt
+   87  cd ..
+   88  sed 's/abc/xyz/gi' day1.txt
+   89  sed 's/abc/xyze/gi' day1.txt
+   90  sed 's/abc/xyze/gi' day1/day1.txt
+   91  cat day1/day1.txt
+   92  sed -i 's/abc/xyz/gi' day1/day1.txt
+   93  cat day1/day1.txt
+   94  sed -n 1p day1/day1.txt
+   95  sed -n 2p day1/day1.txt
+   96  sed -n 6p day1/day1.txt
+   97  sed -n -e 6p -e 5p day1/day1.txt
+   98  sed '5d' day1/day1.txt
+   99  cat day1/day1.txt
+  100  sed -i  "5d" day1/day1.txt
+  101  cat day1/day1.txt
+  102  sed -n -e 1p -e 6p day1/day1.txt
+  103  sed -n -e 1p -e 5p day1/day1.txt
+  104  sed -i -e 1p -e 5p day1/day1.txt
+  105  cat day1/day1.txt
