@@ -62,25 +62,32 @@ forcefully method:
 
 kill -9 id(14843)        -->id(process id)
 
---> uptime 
+--> uptime   --> used to show the how many hours it is running..
 
 
 Networking  Command;
 SSH (secure shell)
+--> ssh is a commend used to connect with server..
 
-ssh starnds for connecting the local system to server
+-->ssh starnds for connecting the local system to server
 
 SCP(secure copy)
+scp as like cp command used to copy the files and directories..
 
---. server to local
---> server to local
--->
+--> server to local system
+--> local system to server..
+--> Between the 2 servers.
+
 cp and scp both woks same
 
-(Rsync) (same scp)
+(Rsync) (same as like scp):
+
+Rsync is used to copy the data to one server to another server.. while transfering the data if any network issue is happen it will start 
+where it is stoped.
+if it is SCP it will start froom the beginning..
 
 
 10gb file
 
 
-if any network issue is there it networks ia back procees is start from where is it was exicted  last tme..
+if any network issue is there it networks ia back procees is start from where is it was exicted the last tme..
