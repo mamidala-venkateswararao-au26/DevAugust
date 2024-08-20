@@ -1,0 +1,86 @@
+19-08-2024
+
+
+
+Process management:
+
+-->ps        -->list out current running  process
+
+-->ps  -aux (ps -ef) --> list out all the process 
+
+--> Top      --> list out all the procees show the more information
+
+--> Htop    -->  to and htop is same but htop desply coloueful data.
+
+--> PID --> process id used manageing the CPU..
+
+
+-->Avg cpu utilization is more wheather my application perforamance  is good or bad.?
+
+ans)---> perforance is less
+
+
+---------------
+
+apt --> ubantu
+yum --> centos/red
+
+
+1)Install appache2 (web apllication)
+
+2)check application running or not
+
+3)stop the application
+
+fallow below steps:
+
+sudo apt update
+sudo apt upgrade
+
+-->sudp apt install apache2
+
+-->sudo service apache2 status           --syntax(sudo service application name keyword)
+
+--> sudo service apache2 stop
+
+--> sudo service apache2 start
+
+--> sudo service apache2 restart
+
+--> sudo service apache2 reload
+
+--> ps -ef | grep "apache2"                --> checking the application
+
+
+
+greaceful method:
+
+sudo service app  start/stop/restart
+
+
+forcefully method:
+
+kill -9 id(14843)        -->id(process id)
+
+--> uptime 
+
+
+Networking  Command;
+SSH (secure shell)
+
+ssh starnds for connecting the local system to server
+
+SCP(secure copy)
+
+--. server to local
+--> server to local
+-->
+cp and scp both woks same
+
+(Rsync) (same scp)
+
+
+10gb file
+
+
+if any network issue is there it networks ia back procees is start from where is it was exicted  last tme..
