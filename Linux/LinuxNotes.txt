@@ -1,0 +1,875 @@
+07-08-2024
+Vi --> editor
+
+ double click yy - p  once after ESC in VIM editor for the copy of content.
+
+syntax: ESC then double click YY - P
+
+delete line:
+ESC --> double click dd (delete perticular line)
+    --> double click dw (delete word) dl(delete letter)
+    --> undo operation u
+    -->delete entire peragraph dL (small d captial L)
+
+set numbers
+    --> ESC --> set nu
+            --> set nonu
+
+search content in file:
+     -->:/heritage   --> (content)
+
+search and replace:
+    -->:%s/india/usa
+    -->%s/india/usa/gi   (global insencitive)
+    -->1s/andriod/linux/gi
+   --> 10s/linux/mobile/gi
+
+head :
+     --> head abc.txt --> top 10 lines
+    --> head -n15 abc.txt
+    --> tail abc.txt  --> bottam 10 lines
+    --> tail -n15 abc.txt
+          
+                 ### (know about ram and storage)
+
+du  :(disk usage) (single file wise)
+    -->du -sh add.txt
+    -->du -sh*  (all)
+
+df  :(disk free)  (total size of your hordware)
+   --> df -h
+
+free :
+   --> free -g (avalible &used by ram)
+
+wc   :
+   --> wc -l add.txt (lines count)
+b  --> wc  -w add.txt (number of words)
+   --> wc -c add.txt (number of character)
+   --> wc -m  add.txt (number of character)
+
+(ctrl +a -->begineing of the line)   (ctral+e --> ending of the line)    (ctral+k   ---> delete the lines)
+
+
+
+08-08-2024:
+
+
+Redirect :
+Note: Use the correct file name while redirecting command output to a file. If there is a
+n existing file with the same name, the redirected command will delete the contents of that file and then 
+it may be overwritten.”
+
+If you do not want a file to be overwritten but want to add more content to an existing file, then you 
+should use ‘>>‘ operator.
+
+
+Redirect(>):
+use: 
+ls>file1.txt
+
+Syntax:  ls file1.txt > file2.txt    Here  copy the file1 content and if any existing files are there overwrite the 
+                                     file delete existing files adding the file1.txt ..
+
+append(>>):
+cat file4.txt   -->12345
+ Syntax : ls file1.txt >> file2.txt    if you want to add more content in the file to without deleting existing file..
+                                       you can use this.
+[ redirect & appends are used to store the outpot of command of file]
+
+
+
+pipe(|)   --> [Pipe is used to output of one commend as an input of other commend]
+
+# Display the numbers 5 to 10.
+
+syntax : head file2.txt | tail -n 6    -> it will display 6 7 8 9 10  [first command output is seound command input]
+
+# if you want to display only one number. exapmlw (23)
+
+head -n 23 file2.txt | tail -n 1
+
+
+head number | tail -n 5
+
+head -n 60 number | tail -n 6    [55,56,57,58,59,60]
+
+
+
+
+sort:
+
+organize element assending or dessing order..
+-->sort file.txt
+--> sort file.txt | uniq   --> [uniq do delete duplicate numbers]
+-->sort -r file.txt |uniq   --> reverse order
+
+
+
+uniqe:
+delete duplicate numbers give the unique elements.uniqe not work without sort..
+
+sort file2.txt | uniq
+
+
+
+
+copy:
+
+Syntax: cp target destination
+
+cp file.txt num
+cp -i    cp -i file1.txt file2.txt                       (i- i is asking for permmission go for overwrite or not?0
+cp -p    cp -p file1.txt file2.txt                        (p- permission)
+
+cp -r    cp -r file1.txt file2.txt                       (r- recursively)
+
+
+
+move: (cut&past)
+
+mv file.txt file2.txt
+
+
+
+History:
+
+ vim file1.txt
+  399  vim file2
+  400  ls
+  401  ls >file1.txt
+  402  ls
+  403  ls file1.txt > file2.txt
+  404  ls
+  405  cat file2.txt
+  406  ls file2 > file2.txt
+  407  ls
+  408  cat file2.txt
+  409  ls
+  410  ls file1.txt > fil2
+  411  cat file2
+  412  ls
+  413  cat fil2
+  414  ls fil2 file2 >> file2.txt
+  415  cat file2.txt
+  416  ls
+  417  ls fil2 file2 > file2.txt
+  418  cat file2.txt
+  419  ls
+  420  ls file1.txt > file2.txt
+  421  cat file2.txt
+  422  cat file1.txt
+  423  cat file2
+  424  ls file2 > file1.txt
+  425  cat file1.txt
+  426  ls file1.txt < file2.txt
+  427  cat file1.txt
+  428  cat file2.txt
+  429  ls file2.txt < file1.txt
+  430  cat file1.txt
+  431  ls
+  432  cat file2
+  433  ls file1.txt > file2
+  434  cat file2
+  435  ls
+  436  vi file2
+  437  cat file2
+  438  head fil2
+  439  vim fil2
+  440  head file2
+  441  head file2 | tail 6
+  442  head file2 | tail -n 6
+  443  cat file2
+  444  vim file2
+  445  head file2
+  446  tail file2
+  447  head file2 | tail -n 6
+  448  head -n 30 file2 | tail -n -7
+  449  head -n 30 file2 | tail -n 7
+  450  head -n 23
+  451  head -n 23 file2
+  452  head -n 23 file2 | tail -n 1
+  453  head -n 55 file2 | tail -n 6
+  454  head -n 35 file2 | tail -n 6
+  455  ls
+  456  cat file2.txt
+  457  vim file2.txt
+  458  sort file2.txt
+  459  sort file2.txt | uniq
+  460  sort -r file2.txt | uniq
+  461  ls
+  462  mkdir new
+  463  cp file2 new/
+  464  ls
+  465  ls new/
+  466  cat new/file2
+  467  ls
+  468  ls new/file2
+  469  cp file1.txt new/
+  470  ls new/
+  471  cp file1.txt new/file2
+  472  cat file2
+  473  cat file1.txt
+  474  cp file2 file1.txt
+  475  cat file1.txt
+  476  cat new/
+  477  cd new/
+  478  ls
+  479  cd ..
+  480  ls
+  481  vi virat
+  482  cp virat new/file1.txt
+  483  cat new/file1.txt
+  484  cp -i virat file2
+  485  ls
+  486  ls new/
+  487  mv file2.txt new/
+  488  ls
+  489  mv file2 new/
+  490  mv file1.txt new/
+  491  ls
+  492  mv virat new/
+  493  mv fil2 new/
+  494  ls
+  495  mkdir update
+  496  mv new/ update
+  497  ls
+  498  history
+
+09-09-2024
+
+grep:
+globel reqular expretion point
+it is use to search specific files &dic
+
+grep "linux" grep.txt    
+
+grep -i "linux" grep.txt      -->[i-case insensitive]  display all captial and small letters. output : linux   Linux
+
+
+grep -in "linux" grep.txt    --> [which line linux is presented inside your file.]
+
+grep  -ic "linux" grep.txt                         --> [howmany times is presented in my file]
+
+grep -iw "linux" grep.txt        --> [used to find the exact  match related linux word in the file]
+
+
+grep -inw "linux" grep.txt    
+
+grep -incw "linux" grep.txt
+
+grep -inw "linux" grep.txt | grep -c "linux"
+
+------------------------------------------------ Search file name using the keywords---------------------------------------------------------------
+
+i want to search for patren .. don't know the file name..
+
+grep -i "linux" *                     -> it will display the list of files where linux is presented.
+
+grep -l "linix" *                    --> it will display the file or directory where the key word was presented.
+
+grep -ie "linix" "window" grep.txt    ->[serach multipule patterns in same line use e]
+
+ls *.txt                              --> ls list of files and it is searching all .txt files display as output....
+
+ls f*                                -->  this command is use for diplay all the files start with f
+
+
+--------------------------------------------- search first letter and last letter using (^ ,$)----------------------------------------------------------                            
+
+grep "^h" file1         -->cap symble  [search only letter start with h]
+
+grep "^h" *              --> search only letter start with h 
+
+grep -i "w$" * | grep -c "w$"   --> this command is used for to check the words end with w and count the how many words present in the grep.
+
+grep "^l" file1
+
+grep "^lin" file1
+
+grep "h$" file1           [search for a word ending with l]
+
+
+Tee:
+
+ls | tee file.txt    --> tee is used to copy the files print into file.txt as output.          
+
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+12-08-2024
+FIND:
+LOCATE:
+UNAME:
+
+
+
+find:         -->find the location of or path of file or dir..and mailny find command is use to find the file in present working directory..
+
+syntax:
+
+--->  find . -iname "file1.txt"   --> this command is used to find the file1.txt in the cuurent directory..
+
+
+--->find copydir/ -iname "file1.txt"    -->  [syntax : find path(. or directoryname)  -iname "file1.txt  ]
+
+<><>if you want to find file without using current path(.) just use directory(folder) name --> [syntax : find path(. or directoryname)  -iname "file1.txt  ]<>
+
+
+1)list down all the files .which are created before 10 days.?   Syntx : [find . -mtime -type f "file1.txt]   --> [f is file and u can also use D d means directory.]
+
+-------> find . -type y -mtime +10
+
+
+
+2)list down all the files .which are created within 10 days.?   Syntx : find . -mtime type f -10  --> howmany days you want you can change accordingly..
+
+-------> find . -type y -mtime -10
+
+
+3)list down all empy files.
+
+-------> find .-type f -empty
+
+4) list of non empty files?
+
+-------> find . -type f -not -empty
+
+5) List out where the file present the curent path?
+
+-------> finf . -type f -iname "abc.txt"
+
+6) search only 2 folders?    --> searching only first and 2 directory
+
+a)  find . -maxdepth 2 -type f -oname "abc.txt"                 --> helps us to search restric the help to sub directoryes.
+
+
+7)list down all the specific files owned by users? as   -user
+
+----> find / -user username
+
+
+
+8)list all the files ending with .txt extentions?as
+
+--------->  find . ".txt$" *
+
+---------? grep ".txt$" *
+
+
+9)list of all the empty files and delete that??as
+
+
+
+find . -type f -empty | xargs rm -r
+
+10)how to find empty directory?
+
+find . -type d -empty
+
+11) list down all the files which is grater than 1mb,1kb?as
+
+---->    find /path/to/directory -type f -size +1M
+
+
+
+---------------------------------------------------------------
+
+locate:
+
+it will search file/dir entire system.
+
+
+syntax:
+
+locate file1
+
+locate file2.txt
+
+-----------------------uname-------
+uname: (unix name)
+
+uname 
+
+uname -a
+
+uname -v
+
+uname -o
+
+
+server : is nothing but anthoer computer create in somewhaere.
+
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+13-08-2029
+
+
+Sed : (Stream Editior)  90% this is vi editior.. photo copy of exact file..fist it will create one temperary copy..
+
+how to replace xyz to abc :
+
+--------------->  2ways to replces:  1 --> open vi editor used this command  --> :%s/xyz/abc/gi imp.txt
+
+                                     2 --> useing sed (sed's/xyz/abc/gi'imp.txt) command to create duplicat copy first change whatever you want then if it is okay the 
+ 
+                                         if you want to perform those changes in your file use this command - (sed -i 's/xyz/abc/gi'imp.txt)                              
+
+Syntax:
+
+--------->sed 's/abc/xyz/gi'imp.txt
+
+
+--------->sed '2s/ac/xyz/gi' imp.txt           ---> if you want t change perticular line use this command
+
+
+once it is done testing part.. i need to        --> i means it affect the orginal file..
+
+
+---------> sed -i 2s/abc/xyz/gi' imp.txt
+
+
+How to replace 157 line number name as sachin:
+
+------------------------------- > sed -i '157s/157/sachin/gi' number.txt
+
+replace 3,4 line replace same time: 
+
+
+-------->  sed -i '3,4s/welcome/linux/gi' imp.txt
+
+
+
+print 150 line number:
+
+-----------------> sed -n 150p number
+
+
+printing 127 and 150 line(pritinting multipule line) :       ----> -e starnd for multipul option.
+
+----------------->sed -n -e 127p -e 150p number
+
+
+
+delete the particular line:
+
+------------------> sed -i '10d' number
+
+printing 199 and 189 lines:
+
+------------------>sed -i -e 199p -e 189p number
+
+------------------>sed -i '180,190d' number
+
+
+
+FILE TYPES:
+
+-  -> normal file
+
+d  -> Directory
+
+l  -> shortcut file(LINK)
+
+FILE PERMISSION:
+
+
+R  --> READ      -4
+
+W  --> WRITE     -2
+
+X  --> EXECUTE   -1
+
+
+owener(user)     group   otheruser
+
+7                 4         3
+
+
+Syntax:
+
+chmod 743 file1.txt                             --> 7(read,write,exicute)   4(read) 3(write exicute)
+
+or 
+
+chmod u=rwz,g=rw,o=r file1.txt              
+
+
+umask--------don't execute.
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
+14-08-2024
+
+
+
+User Management:
+
+Linux: multi operating System.
+
+2 type of users in linux:
+
+Sudo/Super/Root  --> Admin --> he is 1st user .. he has ultimate power.
+
+Normal users    --> we are creating ---> we are normal users.
+
+
+switch to sudo:
+
+----------->sudo su      --> (switch user)
+
+
+root user to normal user :
+
+
+-----------> sudo su ubantu 
+
+
+user add:
+
+--->useradd venkatesh
+
+
+---->id balu ---> to check weatcher user is created or not.
+
+---->passwd venkatesh
+
+Whenever user get created all the user will find here:
+
+----> cat /etc/passwd  --> anthoer way of conform user created or not.
+
+
+
+----------------------------------------------------------------------Shell--------------------------------------------------------------------------------------------
+
+shell  : take input from user give it kernal ..
+
+kernal : heart of operating system.kernal will do all opperations.. convert human understanding formate 
+
+
+shell   :->  chsh bash --> switch the bash 
+
+whenever user get creat it's normally by default sh .. use the chsh (change shell) to change the sh to bash
+
+------> sudo chsh -s /bin/bash divya       --> changing sh to bash to
+   
+      -> sudo chsh -s /bin/bash dharshan
+
+
+
+sudo chsh  -s /bin/bash balu         --> changing sh to bash to
+
+
+sudo userdel divya                  --> deleting the user
+
+
+How to create group:----------------------------------->
+
+--->sudo groupadd dev
+
+check weatcher group is existing or not :
+
+---> getent  group dev
+---> grep -i "dev" /etc/group
+
+how yo add user into group:
+
+
+sudo usermod -aG dev balu            --> usermod(user modificaton)
+
+now check: 
+id balu
+
+
+delete the user from group:
+
+-----------------> 1st methode --> vi /etc/group
+
+---------------->2nd methode --> sudo gpasspwd -d balu dev
+
+
+delete the group:
+
+sudo groupdel dev 
+
+getent group dev
+
+
+
+ading sudo permissions: [convert normal user to sudo user]
+
+1st --> add balu user to sudo group
+
+sudo usermo -aG sudo dharshan
+
+then use below command:
+
+vi /etc/sudousers
+ add dharshan name give permision :ALL
+
+syntax : dharshan:ALL
+
+
+--------------------------------------------------------------------------------------Package Management----------------------------------------------------------------
+
+
+Inastall packages:
+
+sudo apt update
+
+if you want to instaall git:
+
+sudo apt git
+
+git -v
+
+
+apt search git
+
+
+
+dpkg -l
+dpkg 
+
+remove the application:
+
+sudo apt remove apache2
+
+
+which apache2          --> will give the where the application path
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+19-08-2024
+
+
+
+Process management:
+
+-->ps        -->list out current running  process
+
+-->ps  -aux (ps -ef) --> list out all the process 
+
+--> Top      --> list out all the procees show the more information
+
+--> Htop    -->  to and htop is same but htop desply coloueful data.
+
+--> PID --> process id used manageing the CPU..
+
+
+-->Avg cpu utilization is more wheather my application perforamance  is good or bad.?
+
+ans)---> perforance is less
+
+
+---------------
+
+apt --> ubantu
+yum --> centos/red
+
+
+1)Install appache2 (web apllication)
+
+2)check application running or not
+
+3)stop the application
+
+fallow below steps:
+
+sudo apt update
+sudo apt upgrade
+
+-->sudp apt install apache2
+
+-->sudo service apache2 status           --syntax(sudo service application name keyword)
+
+--> sudo service apache2 stop
+
+--> sudo service apache2 start
+
+--> sudo service apache2 restart
+
+--> sudo service apache2 reload
+
+--> ps -ef | grep "apache2"                --> checking the application
+
+
+
+greaceful method:
+
+sudo service app  start/stop/restart
+
+
+forcefully method:
+
+kill -9 id(14843)        -->id(process id)
+
+--> uptime 
+
+
+Networking  Command;
+SSH (secure shell)
+
+ssh starnds for connecting the local system to server
+
+SCP(secure copy)
+
+--. server to local
+--> server to local
+-->
+cp and scp both woks same
+
+(Rsync) (same scp)
+
+
+10gb file
+
+
+if any network issue is there if network is back procees is start from where is it was exicted  last tme..
+
+
+
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+20-08-2024
+
+
+
+wget : which is used to download the files from internet use this commend.
+
+
+
+wget -0 sachin_name ---> if youb want to download some name use -o\
+
+wget -P home/ubantu/wget/abc             ---> (captial p) -p is used to down load the file whaichever directory you want.
+
+
+
+curl : which is used to download the file from internet.. same like wget
+
+
+
+
+ping:
+
+---->ping www.google.com
+
+
+----> ping -c 4 www.facebook.com            (specifing to 4 respencess)
+
+
+DNS(Domian Name Service) :
+-------> converting name to ip address .
+
+Request-Responce Mechanisam:
+
+Round Travel Time (round table time is high performance less.. round table time is less performance high.)
+
+
+ctrl+c ---> to used to terminate perminatly delete the process
+
+ctrl+z ---> is used to stop the process and you want run re again it will start genarate again.
+
+
+jobs --> 
+
+fg 2  ---> it is 
+
+bg (don't try that)
+
+
+
+inconfig:
+
+nslookup  :  --> i do have domain i want ip adress of perticul ip adress. provide ip adress of perticuler domain.
+
+nslookup www. google.com
+
+
+hostname:
+ip adreess of same computer of ip adress..
+
+
+net stat:  ----> it will give all the network informations.
+           ---->active networking connecting .. active listing pods..
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
