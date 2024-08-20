@@ -1,0 +1,61 @@
+20-08-2024
+
+
+
+wget : which is used to download the files from internet use this commend.
+
+
+
+wget -0 sachin_name ---> if youb want to download some name use -o\
+
+wget -P home/ubantu/wget/abc             ---> (captial p) -p is used to down load the file whaichever directory you want.
+
+
+
+curl : which is used to download the file from internet.. same like wget
+
+
+
+
+ping:
+
+---->ping www.google.com
+
+
+----> ping -c 4 www.facebook.com            (specifing to 4 respencess)
+
+
+DNS(Domian Name Service) :
+-------> converting name to ip address .
+
+Request-Responce Mechanisam:
+
+Round Travel Time (round table time is high performance less.. round table time is less performance high.)
+
+
+ctrl+c ---> to used to terminate perminatly delete the process
+
+ctrl+z ---> is used to stop the process and you want run re again it will start genarate again.
+
+
+jobs --> 
+
+fg 2  ---> it is 
+
+bg (don't try that)
+
+
+
+inconfig:
+
+nslookup  :  --> i do have domain i want ip adress of perticul ip adress. provide ip adress of perticuler domain.
+
+nslookup www. google.com
+
+
+hostname:
+ip adreess of same computer of ip adress..
+
+
+net stat:  ----> it will give all the network informations.
+           ---->active networking connecting .. active listing pods..
