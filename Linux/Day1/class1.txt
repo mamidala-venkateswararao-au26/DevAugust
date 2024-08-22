@@ -87,3 +87,33 @@
   330  ls -l
   331  ls -a
 
+---------------------------------------------------------------History--------------------------------------------------------------------
+
+ubuntu@ip-172-31-36-205:~$ mkdir rool1
+ubuntu@ip-172-31-36-205:~$ ls
+day1  new  new2  new3  rool1
+ubuntu@ip-172-31-36-205:~$ cd rool1/
+ubuntu@ip-172-31-36-205:~/rool1$ mkdir -p rool2/rool3
+ubuntu@ip-172-31-36-205:~/rool1$ tree
+.
+└── rool2
+    └── rool3
+
+3 directories, 0 files
+ubuntu@ip-172-31-36-205:~/rool1$ rm -r rool2 rool3
+rm: cannot remove 'rool3': No such file or directory
+ubuntu@ip-172-31-36-205:~/rool1$ rmdir rool2 rool3
+rmdir: failed to remove 'rool2': No such file or directory
+rmdir: failed to remove 'rool3': No such file or directory
+ubuntu@ip-172-31-36-205:~/rool1$ ls
+ubuntu@ip-172-31-36-205:~/rool1$ mkdir -p rool2/rool3/rool4/exam.txt
+ubuntu@ip-172-31-36-205:~/rool1$ tree
+.
+└── rool2
+    └── rool3
+        └── rool4
+            └── exam.txt
+
+5 directories, 0 files
+
+

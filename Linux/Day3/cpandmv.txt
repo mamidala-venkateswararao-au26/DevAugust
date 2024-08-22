@@ -75,6 +75,126 @@ move: (cut&past)
 
 mv file.txt file2.txt
 
+-----------------------------------------------------------------------------------------------------------------------------------------
+                                   Practiceing on EC2 instance
+fil content:
+linux
+
+
+window
+mac
+linux
+w1indow
+srinu
+anil
+w1indow
+w1indow
+w1indow
+w1indow
+ram
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+1
+
+
+
+ubuntu@ip-172-31-36-205:~$ wc new3
+ 26  23 104 new3
+ubuntu@ip-172-31-36-205:~$ wc -l new3
+26 new3
+ubuntu@ip-172-31-36-205:~$ wc -c new3
+104 new3
+ubuntu@ip-172-31-36-205:~$ ls
+day1  new  new2  new3  rool1
+ubuntu@ip-172-31-36-205:~$ touch file1.txt file2.text
+ubuntu@ip-172-31-36-205:~$ vi file1.txt
+ubuntu@ip-172-31-36-205:~$ vi file2.text
+ubuntu@ip-172-31-36-205:~$ ls file1.txt > file2.text
+ubuntu@ip-172-31-36-205:~$ cat file1.txt
+this is file one..
+
+
+hi guys
+
+good morning.
+ubuntu@ip-172-31-36-205:~$ cat file2.text
+file1.txt
+ubuntu@ip-172-31-36-205:~$ vi file2.text
+ubuntu@ip-172-31-36-205:~$ ls file1.txt  >> file2.text
+ubuntu@ip-172-31-36-205:~$ cat file1.txt
+this is file one..
+
+
+hi guys
+
+good morning.
+ubuntu@ip-172-31-36-205:~$ cat file2.text
+this ia 2 nd file ..
+file1.txt
+
+ubuntu@ip-172-31-36-205:~$ head -n 12 new3 | tail -n 1
+w1indow
+ubuntu@ip-172-31-36-205:~$ head -n 10 new3 | tail -n 5
+linux
+w1indow
+srinu
+anil
+w1indow
+__________--------------------> copy&move
+ubuntu@ip-172-31-36-205:~$ ls
+day1  file1.txt  file2.text  new  new2  new3  rool1
+ubuntu@ip-172-31-36-205:~$ cat file1.txt
+this is file one..
+
+
+hi guys
+
+good morning.
+ubuntu@ip-172-31-36-205:~$ cat file2.text
+this ia 2 nd file ..
+file1.txt
+ubuntu@ip-172-31-36-205:~$ cp file1.txt  file2.text
+ubuntu@ip-172-31-36-205:~$ cat file2.text
+this is file one..
+
+
+hi guys
+
+good morning.
+ubuntu@ip-172-31-36-205:~$ cat file1.txt
+this is file one..
+
+
+hi guys
+
+good morning.
+ubuntu@ip-172-31-36-205:~$ ls
+day1  file1.txt  file2.text  new  new2  new3  rool1
+ubuntu@ip-172-31-36-205:~$ vi file1.txt
+ubuntu@ip-172-31-36-205:~$ mv file1.txt  file2.text
+ubuntu@ip-172-31-36-205:~$ cat file2.text
+this is file one..
+
+
+hi guys
+
+
+good morning.
+
+
+move command is use to cut ad past
+ubuntu@ip-172-31-36-205:~$ ls
+day1  file2.text  new  new2  new3  rool1
+ubuntu@ip-172-31-36-205:~$
+
 
 
 -----------------------------------------------------------History:----------------------------------------------------------------------

@@ -2,9 +2,9 @@
 Vi --> editor
  syntax: (Click ESC next double click yy destnation paste)  __>esc-->yy>p  (Copy the content past in Destination or whereever you want)
 (Copy -->Paste)
- double click yy - pp  once after ESC in VIM editor for the copy of content.
+ double click yy - p  once after ESC in VIM editor for the copy of content.
 
-syntax: ESC then double click YY - PP
+syntax: ESC then double click YY - P
 
 delete line:  
 ESC --> double click dd (delete perticular line)  -->  esc-->dd   [move the curser starting of the line click dd so it will delete entire 

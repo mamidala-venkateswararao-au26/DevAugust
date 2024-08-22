@@ -101,6 +101,61 @@ uname -o
 
 server : is nothing but anthoer computer create in somewhaere.
 
+-------------------------------------------------------------------------------------------------------------------------------------
+
+ubuntu@ip-172-31-36-205:~$ find . -iname "new3"
+./new3
+ubuntu@ip-172-31-36-205:~$ find d -iname "new3"
+find: ‘d’: No such file or directory
+ubuntu@ip-172-31-36-205:~$ ls
+day1  file1.txt  file2.text  new  new2  new3  rool1
+ubuntu@ip-172-31-36-205:~$ find . -iname "rool2"
+./rool1/rool2
+ubuntu@ip-172-31-36-205:~$ locate rool2
+Command 'locate' not found, but can be installed with:
+sudo apt install plocate
+ubuntu@ip-172-31-36-205:~$ locate new3
+Command 'locate' not found, but can be installed with:
+sudo apt install plocate
+ubuntu@ip-172-31-36-205:~$ find . -type f -empty
+./.sudo_as_admin_successful
+./new/s.txt
+./.cache/motd.legal-displayed
+ubuntu@ip-172-31-36-205:~$ find . -type f -not -empty
+./day1/day1.txt
+./new3
+./.viminfo
+./.bash_history
+./file2.text
+./.ssh/authorized_keys
+./new/file2.txt
+./new/file1.txt
+./file1.txt
+./.bashrc
+./.profile
+./.bash_logout
+ubuntu@ip-172-31-36-205:~$ find rool1 -type d -empty
+rool1/rool2/rool3/rool4/exam.txt
+ubuntu@ip-172-31-36-205:~$ find . ".txt$" *
+
+ubuntu@ip-172-31-36-205:~$ find . -type d  -empty
+./new2
+./rool1/rool2/rool3/rool4/exam.txt
+ubuntu@ip-172-31-36-205:~$ find -type f -mtime -10
+./day1/day1.txt
+./new3
+./.sudo_as_admin_successful
+./.viminfo
+./.bash_history
+./file2.text
+./.ssh/authorized_keys
+./new/file2.txt
+./new/s.txt
+./new/file1.txt
+./file1.txt
+./.cache/motd.legal-displayed
+ubuntu@ip-172-31-36-205:~$ find -type f -mtime 10
+ubuntu@ip-172-31-36-205:~$
 
 
 

@@ -1,0 +1,93 @@
+19-08-2024
+
+
+
+Process management:
+
+-->ps        -->list out current running  process
+
+-->ps  -aux (ps -ef) --> list out all the process 
+
+--> Top      --> list out all the procees show the more information
+
+--> Htop    -->  to and htop is same but htop desply coloueful data.
+
+--> PID --> process id used manageing the CPU..
+
+
+-->Avg cpu utilization is more wheather my application perforamance  is good or bad.?
+
+ans)---> perforance is less
+
+
+---------------
+
+apt --> ubantu
+yum --> centos/red
+
+
+1)Install appache2 (web apllication)
+
+2)check application running or not
+
+3)stop the application
+
+fallow below steps:
+
+sudo apt update
+sudo apt upgrade
+
+-->sudp apt install apache2
+
+-->sudo service apache2 status           --syntax(sudo service application name keyword)
+
+--> sudo service apache2 stop
+
+--> sudo service apache2 start
+
+--> sudo service apache2 restart
+
+--> sudo service apache2 reload
+
+--> ps -ef | grep "apache2"                --> checking the application
+
+
+
+greaceful method:
+
+sudo service app  start/stop/restart
+
+
+forcefully method:
+
+kill -9 id(14843)        -->id(process id)
+
+--> uptime   --> used to show the how many hours it is running..
+
+
+Networking  Command;
+SSH (secure shell)
+--> ssh is a commend used to connect with server..
+
+-->ssh starnds for connecting the local system to server
+
+SCP(secure copy)
+scp as like cp command used to copy the files and directories..
+
+--> server to local system
+--> local system to server..
+--> Between the 2 servers.
+
+cp and scp both woks same
+
+(Rsync) (same as like scp):
+
+Rsync is used to copy the data to one server to another server.. while transfering the data if any network issue is happen it will start 
+where it is stoped.
+if it is SCP it will start froom the beginning..
+
+
+10gb file
+
+
+if any network issue is there it networks ia back procees is start from where is it was exicted the last tme..
