@@ -1,0 +1,65 @@
+27-08-2024
+
+How to check commit id's..
+--------------------------
+git log --oneline  (it is use to display the commit id's at single line)
+
+$ git log --oneline
+d6d498d (HEAD -> main, origin/main, origin/HEAD) 2nd time changed
+e5e86b3 sample
+2a90b31 (dev) Initial commit
+
+---->  syntax - git checkout commit id
+
+This command is used to checkout the perticuler commit id 
+
+Version:
+Version is nothing but backup of the files..
+
+
+HEAD/ how git maintain the backup
+--------------------------------
+--> HEAD is a pointer it always shows the latest commit..
+-->example:
+
+$ git log --oneline
+d6d498d (HEAD -> main, origin/main, origin/HEAD) 2nd time changed
+e5e86b3 sample
+2a90b31 (dev) Initial commit
+ 
+
+
+Both are same:
+---> git switch dev   -}  both are used to switch the branch and working same.
+--> git checkout dev  -}
+
+How to create new branch:
+------------------------
+
+---->git branch dev
+
+Syntax: git branch branchname
+
+after creating a new branch how to do push local to github repo?
+---->git push --set-upstream origin dev
+
+
+How to switch to perticular commit id>.
+-------------------------------------
+-->git checkout commitid
+-->git switch --detach commit id
+
+example:
+-------------
+$ git log --oneline
+e5e86b3 (HEAD) sample
+2a90b31 Initial commit
+
+WONDER@DESKTOP-KNMBA12 MINGW64 ~/Desktop/Git/GitForDevops ((e5e86b3...))
+$ git switch --detach 2a90b31
+Previous HEAD position was e5e86b3 sample
+HEAD is now at 2a90b31 Initial commit
+
+WONDER@DESKTOP-KNMBA12 MINGW64 ~/Desktop/Git/GitForDevops ((2a90b31...))
+$ git log --oneline
+2a90b31 (HEAD) Initial commit
