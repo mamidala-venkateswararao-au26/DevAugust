@@ -63,3 +63,72 @@ HEAD is now at 2a90b31 Initial commit
 WONDER@DESKTOP-KNMBA12 MINGW64 ~/Desktop/Git/GitForDevops ((2a90b31...))
 $ git log --oneline
 2a90b31 (HEAD) Initial commit
+
+
+
+
+
+
+
+
+
+
+
+  cd Git
+  537  git clone https://github.com/mamidala-venkateswararao-au26/GitForDevops.git
+  538  git branch
+  539  git checkout master
+  540  git log --oneline
+  541  git checkout efcddee
+  542  git log --oneline
+  543  git checout master
+  544  git checkout master
+  545  git log --oneline
+  546  ls
+  547  cd GitForDevops/
+  548  git branches
+  549  git branch
+  550  git checkout dev
+  551  git branch
+  552  git checkout branch dev
+  553  git add branch dev
+  554  git branch --help
+  555  git branch dev
+  556  git branch
+  557  mkdir 123
+  558  git add .
+  559  git commit -m "sample"
+  560  git push
+  561  vim 123/sample.txt
+  562  git add .
+  563  git commit-m"sample2"
+  564  git commit -m "sample"
+  565  git push
+  566  git log --oneline
+  567  vim 123/sample.txt
+  568  git add
+  569  vim 123/sample.txt
+  570  git status
+  571  git add .
+  572  git commit -m "2nd time changed"
+  573  git push
+  574  git log --online
+  575  git log --oneline
+  576  git checkout dev
+  577  ls
+  578  touch file1txt
+  579  vi file1txt
+  580  git status
+  581  git add .
+  582  git status
+  583  git commit -m "changingFiles"
+  584  git push
+  585  git push --set-upstream origin dev
+  586  git log --oneline
+  587  git checkout main
+  588  git log --oneline
+  589  git checkout e5e86b3
+  590  git log --oneline
+  591  git switch --detach 2a90b31
+  592  git log --oneline
+  593  git checkout main
