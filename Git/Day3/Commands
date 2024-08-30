@@ -30,6 +30,9 @@ git init
 
 git remote add origin https://github.com/sachin-ram-02/facebook.git
 
+$ git remote -v
+origin  https://github.com/mamidala-venkateswararao-au26/GitForDevops.git (fetch)
+origin  https://github.com/mamidala-venkateswararao-au26/GitForDevops.git (push)
 
 git remote -v
 
