@@ -1,1 +1,79 @@
 s
+ssh-keygen -t rsa -b 4096 -C "quantumcloudtechie@gmail.com"
+
+		go to c drive 
+		
+		go to users
+		
+		go to user name (your user name)
+		
+		go inside .ssh folder
+
+		open idrsa.pub   or    1kb file in note pad  , copy it
+
+		now go to your git hub acct ------>  go to settings =====> go to ssh and gpg keys
+
+hers add new ssh key ,, provide any name and add the key and save
+
+
+ 
+  
+git config --global user.name "sachin-rma-02"
+  
+git config --global user.email "quantumcloudtechie@gmail.com"
+
+git config --list
+
+adding your destination repo
+--------------------------
+git init
+
+git remote add origin https://github.com/sachin-ram-02/facebook.git
+
+
+git remote -v
+
+git clone https://github.com/sachin-ram-02/facebook.git
+
+
+cd to that folder
+
+make some changes
+
+git status
+
+git add .  or file name
+
+git status
+
+git commit -m "messages"
+
+git status
+
+git push
+
+git log
+
+git log --oneline
+
+git show commit id
+
+
+git pull
+
+git fetch
+
+
+git checkout commit id
+
+git checkout main
+
+
+git switch --detach fc0d072
+
+git switch branchname
+
+
+git branch
+
+git branch -a
