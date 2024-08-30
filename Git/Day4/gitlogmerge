@@ -64,6 +64,32 @@ WONDER@DESKTOP-KNMBA12 MINGW64 ~/Desktop/Git/GitForDevops ((2a90b31...))
 $ git log --oneline
 2a90b31 (HEAD) Initial commit
 
+-----------------
+GitMerge:
+---------
+
+Git merage is used to merge to the child branchh to main branch
+
+
+syntx:  step1: switch to Destination branch   ---> git checkout main
+        step2: git merge Dev
+
+
+GitRebase:
+----------
+both are use to combain to chaild to main branch.
+
+
+
+email github:
+------------
+pull request
+change request
+merge request
+
+git addimin -->review
+            ---> no issue then merge
+
 
 
 
