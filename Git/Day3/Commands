@@ -38,7 +38,8 @@ git remote -v
 
 git clone https://github.com/sachin-ram-02/facebook.git
 
-
+workflow
+-----------
 cd to that folder
 
 make some changes
@@ -55,16 +56,28 @@ git status
 
 git push
 
+Git Log:
+--------
+
+git log is used to give the information about the how many commits you have done..
+
 git log
 
 git log --oneline
+git log -2       --> it will give latest 2 commits
 
 git show commit id
 
+git pull:
+--------
+-> git pull is used to bring the changes to remote to local.
 
 git pull
+Git fetch:
+-------
+git fetch is used to used to bring the change remote repo to local repo but it will not update in the local repo .. and if you want to 
+use git merge.
 
-git fetch
 
 
 git checkout commit id
@@ -79,4 +92,5 @@ git switch branchname
 
 git branch
 
+check all the branches:
 git branch -a
