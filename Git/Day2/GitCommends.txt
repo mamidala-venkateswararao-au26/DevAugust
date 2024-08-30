@@ -1,0 +1,26 @@
+GitWorkFlow.
+--------------
+
+GitClone: Gitclone is used to downlaodor copy from remote repo to lical repo/..
+
+
+Git init --> it convert normal repo to git repo. and it intilize normal or git repo.
+
+Git Push : gitpush is used to change the local repo to remote repo..
+
+Git Pull : is used to change the remote repo to local repo.
+
+MetaData : is nothing but who made the changes ,why made the changes when made the changes.
+
+
+Branch:
+-------
+
+Git WorkFlow:
+
+Gitinit    gitclone   (add,commit)  gitpush
+
+git pull   Branch 
+
+
+
