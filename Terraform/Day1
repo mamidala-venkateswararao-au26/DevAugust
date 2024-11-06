@@ -1,0 +1,18 @@
+                                     Terroform:
+
+
+
+Creating infra in 3 ways: 
+
+1)AWS Console
+
+2)Imperative Method (python,shell)    --> step by step approach to create the infrastrucuter.    
+
+problems --> 1)docs      
+             2)Not scalable    
+             3)no history  
+             4) mutable infrastructure.
+
+3) Declarative Method:
+
+
