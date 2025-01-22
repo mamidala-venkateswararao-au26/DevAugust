@@ -1,1 +1,35 @@
-First day of Aws .
+
+Server : Server is nothing but Another Computer.That provides  informations to another computers called as Clients throught a networks..
+
+Types Of Servers:
+1) On primises servers:
+If the Servers are Created,Used,Managed by the Organization itself we called it as a On Primises servers.
+
+2) Cloud Servers:
+if we create and used the servers but not managed by us we called it as Cloud Providers..
+
+--> Why everyone is moveing towards cloud servers.?
+a) 1) Cost Optimization
+
+
+Public Server                    Pravite Server
+1)AWS                            1)Alibaba
+2)AZURE
+3)GCP
+
+
+Regions: Regions are nothing but geographical area/specific are whaere AWS has DataCenters.
+
+AvailabilityZones: Availbility zones are nothng but collection of DataCenters..inside availability zones you have minimam 2 dataCenters..
+
+Hypervisior: 
+
+lifecycle:
+if you create EC2
+\\
+fist it will go Regions(mumbai) --> Availability Zones --> DataCenter -->WRAC(WRACK) --> Hyperviser(EC2) inside the hyperviser ec2 will 
+craete.\\
+
+
+
+
