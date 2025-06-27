@@ -14,5 +14,11 @@ problems --> 1)docs
              4) mutable infrastructure.
 
 3) Declarative Method:
+scalable approach
+track the history
+immutable infrastucture
+cloud augnostic - creating one file using same file i can able to create infra to multipule providers.
+
+Terraform is infrasturcture tool. it is used create infra and modify the infra and track the infra .
 
 
